@@ -618,7 +618,7 @@ creating a Dockerfile like the following, and then building it.
 
 ```dockerfile
 # syntax=docker/dockerfile:1
-FROM alpine
+FROM alpine:3.23.3
 ENV ADMIN_USER="mark"
 RUN echo $ADMIN_USER > ./mark
 RUN unset ADMIN_USER
@@ -640,7 +640,7 @@ and have the `RUN` command just run that shell script.
 
 ```dockerfile
 # syntax=docker/dockerfile:1
-FROM alpine
+FROM alpine:3.23.3
 RUN export ADMIN_USER="mark" \
     && echo $ADMIN_USER > ./mark \
     && unset ADMIN_USER
